@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  // overflow-x: hidden;
+  overflow: auto;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh; /* Ensure the body takes up full height */
+  position: relative; /* Needed for the pseudo-element */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://plus.unsplash.com/premium_photo-1701590725721-add548ecdf61?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat center center;
+  background-size: cover;
+  opacity: 0.3; /* Adjust opacity here */
+  z-index: -1; /* Ensure it stays behind content */
+}
+
+/* Left Menu Box */
+.left_box {
+  // border: 1px solid black;
+  width: 16.5%;
+  height: 100%;
+  position: fixed;
+  // background-color: rgba(106, 106, 3, 0.849);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+
+  #menu,
+  #categorias,
+  #modificadors,
+  #impuestos,
+  #ordenes,
+  #horarios
+ {
+    font-size: 18px;
+    padding: 7%;
+    /* background-color: lightblue; */
+    border: 1px solid black;
+    width: 80%;
+     margin: auto; 
+    margin-bottom: 8%;
+    margin-top: 15%;
+  }
+  .custom-menu {
+    background-color: inherit
+     !important;
+     flex-grow: 1;
+  }
+  
+
+  #menu:hover,
+  #categorias:hover,
+  #modificadors:hover,
+  #impuestos:hover,
+  #ordenes:hover,
+  #horarios:hover
+   {
+    border: 2px solid black;
+    background-color: lightblue;
+  }}
+
+  #log_out{
+    position: absolute;
+    bottom: 3%;
+    left: 10%;
+    background-color: rgb(245, 132, 132);
+    border: 2px solid red;
+    width: auto;
+    padding: 5%;
+    font-size: 20px;
+  }
+  #log_out:hover {
+    // border: 2px solid black;
+    background-color: rgb(233, 8, 8);
+    font-size: large;
+    color: white;
+  }
+
+/* Right Content Area */
+.right_div {
+  margin-left: 18%; /* Leave space for the fixed left menu */
+  padding: 20px;
+  // border: 2px solid black;
+  height: 100vh;
+  width: 80%;
+  overflow: auto; /* Add scroll if content exceeds viewport height */
+  // background-color: #ffffff; /* Ensure white background */
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    // border: 1px solid black;
+  }
+
+  /* Select Box and Dropdown */
+  .select_box {
+    width: 100%;
+    margin-bottom: 20px; /* Space between dropdown and other elements */
+
+    .select_div {
+      width: 100%;
+    }
+  }
+
+  /* .input_div {
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+
+    #input_box {
+      width: 35%;
+      padding: 7px;
+      font-size: 15px;
+      border: 1px solid black;
+      border-radius: 15px;
+    }
+
+    #input_box:hover {
+      background-color: rgb(230, 239, 241);
+    }
+
+    #input_box:focus {
+      border: 2px solid black;
+    }
+
+    .box {
+      gap: 6%;
+      margin-left: 9%;
+      display: flex;
+      justify-content: center;
+      width: 60%;
+      border: 1px solid black;
+
+      .custom-file-upload {
+        display: inline-block;
+        padding: 10px 15px;
+        cursor: pointer;
+        border: none;
+        border-radius: 15px;
+        font-size: 14px;
+        width: 70%;
+        border: 1px solid black;
+      }
+
+      .custom-file-upload:hover {
+        background-color: rgb(230, 239, 241);
+      }
+
+      #crear_btn {
+        padding: 20px;
+        border-radius: 4px;
+        font-size: 18px;
+        border-radius: 15px;
+        width: auto;
+        border: 2px solid blue;
+      }
+    }
+  } */
+  .input_div {
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+
+    #input_box {
+      width: 100%; 
+      padding: 7px;
+      font-size: 15px;
+      border: 1px solid white;
+      box-shadow: 2px 2px  rgb(15, 135, 175);
+      border-radius: 15px;
+      margin-right: 8px;
+    }
+
+    #input_box:hover {
+      background-color: rgb(230, 239, 241);
+    }
+
+    #input_box:focus {
+      border: 2px solid black;
+    }
+
+    .box {
+      gap: 6px;
+      margin-left: 0; /* Remove margin for better alignment */
+      display: flex;
+      // flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      // border: 1px solid brown;
+
+      .custom-file-upload {
+        display: inline-block;
+        padding: 10px 15px;
+        cursor: pointer;
+        border: none;
+        border-radius: 15px;
+        font-size: 14px;
+        width: 100%; /* Adjust width */
+        border: 1px solid lightblue;
+      box-shadow: 2px 2px  rgb(15, 135, 175);
+
+      }
+
+      .custom-file-upload:hover {
+        background-color: rgb(230, 239, 241);
+      }
+
+      #crear_btn {
+        padding: 20px;
+        border-radius: 15px;
+        font-size: 16px;
+        width: 100%;
+        border: 2px solid blue;
+      }
+    }
+  }
+}
+
+.first_page {
+  position: relative;
+  height: auto;
+  margin-top: 5%;
+  // border: 1px solid black;
+  width: 100%;
+}
+
+.first_page_header {
+  // border: 2px solid brown;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%;
+}
+#first_food_img {
+  border: 2px solid green;
+  // margin-left: 1%;
+  margin-right: 9.9%;
+  border-radius: 15px;
+}
+#papitas {
+  margin-left: 1%;
+  margin-right: 25%;
+  font-size: large;
+}
+#editar_btn {
+  position: absolute;
+  left: 58%;
+  background-color: green;
+  border: 2px solid rgb(2, 79, 2);
+  font-size: large;
+  // margin-right: 22%;
+  color: white;
+  border-radius: 12px;
+}
+
+#eliminar_btn {
+  position: absolute;
+  right: 0%;
+  left: auto;
+  background-color: green;
+  border: 2px solid rgb(2, 79, 2);
+  color: white;
+  font-size: large;
+  border-radius: 12px;
+}
+
+.ant-card-body {
+  color: black; 
+  // font-size: 16px;
+  padding: 0%;
+  height: 90px;
+  // border: 1px solid black;
+}
+
+.card{
+  // padding: 1%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  // border: 1px solid brown;
+  // border: 8px solid black;
+  
+}
+
+.first{
+  // border: 9px solid gray;
+  margin-bottom: 5%;
+  margin-top: 7%;
+  box-shadow:  -2px -2px  rgb(24, 167, 215);
+  // box-shadow:  2px 2px  rgb(24, 167, 215);
+  width: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .input_div {
+    padding: 10px; /* Reduce padding */
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    #input_box {
+      width: 100%; /* Full width for input */
+    }
+
+    .box {
+      margin-top: 3%;
+      gap: 10px;
+      width: 100%; /* Full width */
+      flex-direction: column;
+      margin-left: 0;
+    }
+
+    .custom-file-upload {
+      width: 100%;
+    }
+
+    #crear_btn {
+      width: 100%;
+    }
+  }
+}
