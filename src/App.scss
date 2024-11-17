@@ -236,8 +236,13 @@ body::before {
   position: relative;
   height: auto;
   margin-top: 5%;
-  // border: 1px solid black;
+  // border: 1px solid rgb(12, 246, 246);
+  box-shadow: -2px -2px rgb(2, 66, 66, 0.2);
+  background-color: lightblue;
+  padding: 1%;
   width: 100%;
+  padding-bottom: 55px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .first_page_header {
@@ -249,29 +254,29 @@ body::before {
 #first_food_img {
   border: 2px solid green;
   // margin-left: 1%;
-  margin-right: 9.9%;
+  margin-right: 2%;
   border-radius: 15px;
 }
 #papitas {
   margin-left: 1%;
-  margin-right: 25%;
+  margin-right: 32%;
   font-size: large;
 }
 #editar_btn {
-  position: absolute;
-  left: 58%;
+  // position: absolute;
+  // left: 58%;
   background-color: green;
   border: 2px solid rgb(2, 79, 2);
   font-size: large;
-  // margin-right: 22%;
+  margin-right: 22%;
   color: white;
   border-radius: 12px;
 }
 
 #eliminar_btn {
-  position: absolute;
-  right: 0%;
-  left: auto;
+  // position: absolute;
+  // right: 2%;
+  // left: auto;
   background-color: green;
   border: 2px solid rgb(2, 79, 2);
   color: white;
@@ -282,9 +287,12 @@ body::before {
 .ant-card-body {
   color: black; 
   // font-size: 16px;
-  padding: 0%;
+  // padding: 0%;
   height: 90px;
   // border: 1px solid black;
+}
+.ant-card-body:hover{
+  background-color: rgb(255, 243, 243);
 }
 
 .card{
@@ -333,3 +341,6 @@ body::before {
     }
   }
 }
+
+
+

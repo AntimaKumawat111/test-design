@@ -4,14 +4,11 @@ import { Menu } from "antd";
 import { Button } from "antd";
 import { Select, Space } from "antd";
 import { Card, List } from "antd";
-import {
-  SettingOutlined,
-  MenuOutlined,
-} from "@ant-design/icons";
+import { SettingOutlined, MenuOutlined } from "@ant-design/icons";
 import LogoutIcon from "@mui/icons-material/Logout";
-import LayersIcon from '@mui/icons-material/Layers';
-import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
-import ListAltIcon from '@mui/icons-material/ListAlt';
+import LayersIcon from "@mui/icons-material/Layers";
+import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
+import ListAltIcon from "@mui/icons-material/ListAlt";
 
 const items = [
   { label: "Menu", id: "menu", icon: <MenuOutlined /> },
@@ -44,10 +41,10 @@ const FileUpload = () => {
   ];
 
   return (
-    <div >
+    <div>
       <div className="left_box">
         <Menu
-        className="custom-menu"
+          className="custom-menu"
           style={{ width: "auto", height: "100%" }} // Ensure menu fills the height of left_box
           mode="inline"
           items={items}
@@ -76,12 +73,9 @@ const FileUpload = () => {
           <input type="text" placeholder="Nueva categoria" id="input_box" />
           <div className="box">
             <label className="custom-file-upload">
-              <input
-                type="file"
-                onChange={handleFileChange}
-                id="choose_file"
-              />
-              {fileName && <p>Selected file: {fileName}</p>} {/* Display file name */}
+              <input type="file" onChange={handleFileChange} id="choose_file" />
+              {fileName && <p>Selected file: {fileName}</p>}{" "}
+              {/* Display file name */}
             </label>
             <Button type="primary" id="crear_btn">
               Crear Categoria
@@ -114,18 +108,110 @@ const FileUpload = () => {
                   <Card className="first">{item.content}</Card>
                   <Card className="first">{item.content}</Card>
                   <Card className="first">{item.content}</Card>
-                  <Card className="first">{item.content}</Card>
-                  <Card className="first">{item.content}</Card>
-                  <Card className="first">{item.content}</Card>
-                  <Card className="first">{item.content}</Card>
-                  <Card className="first">{item.content}</Card>
-                  
-                  
                 </List.Item>
               )}
             />
           </div>
         </div>
+    
+
+        <div className="first_page">
+          <div className="first_page_header">
+            <img
+              src="https://res.cloudinary.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop,q_90,fl_progressive/w_500,f_auto,c_fit/hablis-hotel-chennai/A_Dosa_platter_with_south_indian_sides_kchad7"
+              alt="Food"
+              width={55}
+              height={55}
+              id="first_food_img"
+            />
+            <h4 id="papitas">Papitas Fritas</h4>
+            <Button id="editar_btn">Editar</Button>
+            <Button id="eliminar_btn">Eliminar</Button>
+          </div>
+          <div className="card">
+            <List
+              grid={{
+                gutter: 16,
+                column: 3,
+              }}
+              dataSource={data}
+              renderItem={(item) => (
+                <List.Item>
+                  <Card className="first">{item.content}</Card>
+                  <Card className="first">{item.content}</Card>
+                  <Card className="first">{item.content}</Card>
+                </List.Item>
+              )}
+            />
+          </div>
+        </div>
+    
+
+        <div className="first_page">
+          <div className="first_page_header">
+            <img
+              src="https://res.cloudinary.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop,q_90,fl_progressive/w_500,f_auto,c_fit/hablis-hotel-chennai/A_Dosa_platter_with_south_indian_sides_kchad7"
+              alt="Food"
+              width={55}
+              height={55}
+              id="first_food_img"
+            />
+            <h4 id="papitas">Papitas Fritas</h4>
+            <Button id="editar_btn">Editar</Button>
+            <Button id="eliminar_btn">Eliminar</Button>
+          </div>
+          <div className="card">
+            <List
+              grid={{
+                gutter: 16,
+                column: 3,
+              }}
+              dataSource={data}
+              renderItem={(item) => (
+                <List.Item>
+                  <Card className="first">{item.content}</Card>
+                  <Card className="first">{item.content}</Card>
+                  <Card className="first">{item.content}</Card>
+                </List.Item>
+              )}
+            />
+          </div>
+        </div>
+    
+
+        <div className="first_page">
+          <div className="first_page_header">
+            <img
+              src="https://res.cloudinary.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop,q_90,fl_progressive/w_500,f_auto,c_fit/hablis-hotel-chennai/A_Dosa_platter_with_south_indian_sides_kchad7"
+              alt="Food"
+              width={55}
+              height={55}
+              id="first_food_img"
+            />
+            <h4 id="papitas">Papitas Fritas</h4>
+            <Button id="editar_btn">Editar</Button>
+            <Button id="eliminar_btn">Eliminar</Button>
+          </div>
+          <div className="card">
+            <List
+              grid={{
+                gutter: 16,
+                column: 3,
+              }}
+              dataSource={data}
+              renderItem={(item) => (
+                <List.Item>
+                  <Card className="first">{item.content}</Card>
+                  <Card className="first">{item.content}</Card>
+                  <Card className="first">{item.content}</Card>
+                </List.Item>
+              )}
+            />
+          </div>
+        </div>
+    
+
+       
       </div>
     </div>
   );
